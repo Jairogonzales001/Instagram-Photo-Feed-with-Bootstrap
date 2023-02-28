@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+	<title>Instagram Photo Feed with Bootstrap</title>
+	<script src="https://kit.fontawesome.com/52372da973.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="https://www.instagram.com">
+					<i class="fa-brands fa-instagram"></i>
+					Instagram
+				</a>
+				<div class="navbar-nav">
+					<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+						Create a new post
+					</button>
+					<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+									<button type="button" class="btn-close" data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="form-group">
+											<label for="message-text" class="col-form-label">Caption:</label>
+											<textarea class="form-control" id="message-text"
+												placeholder="Add the caption of your post here"></textarea>
+												<i class="fa-solid fa-camera"></i>
+												<i class="fa-solid fa-location-dot"></i>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary"
+										data-bs-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-success">Publish</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+							aria-expanded="false"><i class="fa-solid fa-gear"></i>
+						</button>
+						<ul class="dropdown-menu dropdown-menu-lg-end">
+							<li><a class="dropdown-item" href="#">Profile</a></li>
+							<li><a class="dropdown-item" href="#">Accesibility</a></li>
+							<li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="#">Log out</a></li>
+						</ul>
+					</div>
+				</div>
+		</nav>
+			<div class="container-fluid">
+				<div class="nav nav-pills justify-content-center">
+					<ul class="nav nav-pills" id="myTab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link text-secondary" id="home-tab" data-toggle="tab"
+								href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="fa fa-th" aria-hidden="true"></i></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-secondary" id="post-tab" data-toggle="tab"
+								href="#post" role="tab" aria-controls="post" aria-selected="false"><i class="fa fa-square" aria-hidden="true"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="tab-content">
+					<div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+						<div class="row">
+							<img class="col-4 p-0" src="https://as1.ftcdn.net/v2/jpg/03/55/28/80/1000_F_355288042_An4jhyVFELBAY05m97yMQYDTDpNKeeJf.jpg">
+							<img class="col-4 pr-1 pl-1" src="https://as1.ftcdn.net/v2/jpg/01/34/43/54/1000_F_134435477_wZEyHcpQgo9kZdrl2KdnYsurcN38x1dk.jpg">
+							<img class="col-4 p-0" src="https://as1.ftcdn.net/v2/jpg/02/29/26/20/1000_F_229262002_KyWdxCfQgQuLlVSvTJx2O4mlnZxkNX3Y.jpg">
+						</div>
+						<div class="row">
+							<img class="col-4 p-0 pt-1 pb-1" src="https://media.gettyimages.com/id/1245711141/photo/topshot-fbl-wc-2022-match64-arg-fra-trophy.jpg?s=1024x1024&w=gi&k=20&c=Pq4X7mhre7PXYPwoyiRW3p0fC0FYQr4X14zdWn6eofQ=">
+							<img class="col-4 pr-1 pl-1 pt-1 pb-1" src="https://as1.ftcdn.net/v2/jpg/00/84/73/26/1000_F_84732619_fc6V8jy1C9M1EMCDc4O91sFGbTyi40jZ.jpg">
+							<img class="col-4 p-0 pt-1 pb-1" src="https://as2.ftcdn.net/v2/jpg/02/21/92/21/1000_F_221922193_Ayb1yktsObIQMjiygsWhcNElZXd9imYj.jpg">
+						</div>
+						<div class="row">
+							<img class="col-4 p-0" src="https://media.gettyimages.com/id/1194180180/photo/los-angeles-lakers-v-atlanta-hawks.jpg?s=1024x1024&w=gi&k=20&c=WHsjLIod35jD34Pz85B8te6mFHlTZ4x2Y-aL8_6bUoI=">
+							<img class="col-4 pr-1 pl-1" src="https://as2.ftcdn.net/v2/jpg/03/68/60/13/1000_F_368601343_ZKv6FaAcM25QLYS8JisJLaBnUvBE51VU.jpg">
+							<img class="col-4 p-0" src="https://as1.ftcdn.net/v2/jpg/03/28/04/74/1000_F_328047467_EhOr1TscNzNHgkwwjyo9MjaOZy2j8PmC.jpg">
+						</div>
+					</div>
+	
+					<div class="tab-pane bg-white" id="post" role="tabpanel" aria-labelledby="post-tab">
+						<div class="container mt-5 col-6 bg-white rounded p-0 border border-grey">
+							<div class="d-flex justify-content-between">
+								<div>
+								   <h4>My Posts</h4>
+								</div>
+								<div>
+									<h5 class="text-secondary">12/14</h5>
+								</div>
+						   </div>
+							<div class="row">
+								<img src="https://as1.ftcdn.net/v2/jpg/03/55/28/80/1000_F_355288042_An4jhyVFELBAY05m97yMQYDTDpNKeeJf.jpg">
+							</div>
+							<div class="row p-3">
+								<div class="symbols">
+									<i class="fa-regular fa-heart"></i>
+									<i class="fa-regular fa-comment"></i>
+									<i class="fa-regular fa-paper-plane"></i>
+								</div>
+								<h6><strong>100 Likes</strong></h6>
+								<h6>This is a photo of my favorite sports.</h6>
+							</div>
+							<div class="row p-3">
+								<form>
+									<input type="text" class="border-0 col-10" placeholder="Comment...">
+								</form>
+							</div>
+						</div>
+	
+						<div class="container mt-5 col-6 bg-white rounded p-0 border border-grey">
+							<div class="d-flex justify-content-between">
+								<div>
+								   <h4>My Posts</h4>
+								</div>
+								<div>
+									<h5 class="text-secondary">12/14</h5>
+								</div>
+							</div>
+							<div class="row">
+								<img src="https://as1.ftcdn.net/v2/jpg/01/34/43/54/1000_F_134435477_wZEyHcpQgo9kZdrl2KdnYsurcN38x1dk.jpg" class="img-fluid">
+							</div>
+							<div class="row p-3">
+								<div class="symbols">
+									<i class="fa-regular fa-heart"></i>
+									<i class="fa-regular fa-comment"></i>
+									<i class="fa-regular fa-paper-plane"></i>
+								<h6><strong>130 Likes</strong></h6>
+								<h6>Same breed as my dog. #bullterrier</h6>
+							</div>
+							<div class="row p-3">
+								<form>
+									<input type="text" class="border-0 col-10" placeholder="Comment...">
+								</form>
+							</div>
+						</div>
+						</div>
+	
+						<div class="tab-pane bg-white" id="post" role="tabpanel" aria-labelledby="post-tab">
+							<div class="container mt-5 col-6 bg-white rounded p-0 border border-grey">
+								<div class="d-flex justify-content-between">
+									<div>
+									   <h4>My Posts</h4>
+									</div>
+									<div>
+										<h5 class="text-secondary">12/14</h5>
+									</div>
+							   </div>
+								<div class="row">
+									<img src="https://media.gettyimages.com/id/1245711141/photo/topshot-fbl-wc-2022-match64-arg-fra-trophy.jpg?s=1024x1024&w=gi&k=20&c=Pq4X7mhre7PXYPwoyiRW3p0fC0FYQr4X14zdWn6eofQ=">
+								</div>
+								<div class="row p-3">
+									<div class="symbols">
+										<i class="fa-regular fa-heart"></i>
+										<i class="fa-regular fa-comment"></i>
+										<i class="fa-regular fa-paper-plane"></i>
+									</div>
+									<h6><strong>430 Likes</strong></h6>
+									<h6>One of the greatest soccer players winning the world cup. #Messi</h6>
+								</div>
+								<div class="row p-3">
+									<form>
+										<input type="text" class="border-0 col-10" placeholder="Comment...">
+									</form>
+								</div>
+							</div>
+	
+							<div class="tab-pane bg-white" id="post" role="tabpanel" aria-labelledby="post-tab">
+								<div class="container mt-5 col-6 bg-white rounded p-0 border border-grey">
+									<div class="d-flex justify-content-between">
+										<div>
+										   <h4>My Posts</h4>
+										</div>
+										<div>
+											<h5 class="text-secondary">12/14</h5>
+										</div>
+								   </div>
+									<div class="row">
+										<img src="https://as1.ftcdn.net/v2/jpg/00/84/73/26/1000_F_84732619_fc6V8jy1C9M1EMCDc4O91sFGbTyi40jZ.jpg">
+									</div>
+									<div class="row p-3">
+										<div class="symbols">
+											<i class="fa-regular fa-heart"></i>
+											<i class="fa-regular fa-comment"></i>
+											<i class="fa-regular fa-paper-plane"></i>
+										</div>
+										<h6><strong>125 Likes</strong></h6>
+										<h6>This is Machu Picchu.</h6>
+									</div>
+									<div class="row p-3">
+										<form>
+											<input type="text" class="border-0 col-10" placeholder="Comment...">
+										</form>
+									</div>
+								</div>
+	
+								<div class="tab-pane bg-white" id="post" role="tabpanel" aria-labelledby="post-tab">
+									<div class="container mt-5 col-6 bg-white rounded p-0 border border-grey">
+										<div class="d-flex justify-content-between">
+											<div>
+											   <h4>My Posts</h4>
+											</div>
+											<div>
+												<h5 class="text-secondary">12/14</h5>
+											</div>
+									   </div>
+										<div class="row">
+											<img src="https://as2.ftcdn.net/v2/jpg/02/21/92/21/1000_F_221922193_Ayb1yktsObIQMjiygsWhcNElZXd9imYj.jpg">
+										</div>
+										<div class="row p-3">
+											<div class="symbols">
+												<i class="fa-regular fa-heart"></i>
+												<i class="fa-regular fa-comment"></i>
+												<i class="fa-regular fa-paper-plane"></i>
+											</div>
+											<h6><strong>80 Likes</strong></h6>
+											<h6>My favorite food, ceviche.</h6>
+										</div>
+										<div class="row p-3">
+											<form>
+												<input type="text" class="border-0 col-10" placeholder="Comment...">
+											</form>
+										</div>
+									</div>
+	
+									<div class="tab-pane bg-white" id="post" role="tabpanel" aria-labelledby="post-tab">
+										<div class="container mt-5 col-6 bg-white rounded p-0 border border-grey">
+											<div class="d-flex justify-content-between">
+												<div>
+												   <h4>My Posts</h4>
+												</div>
+												<div>
+													<h5 class="text-secondary">12/14</h5>
+												</div>
+										   </div>
+											<div class="row">
+												<img src="https://media.gettyimages.com/id/1194180180/photo/los-angeles-lakers-v-atlanta-hawks.jpg?s=1024x1024&w=gi&k=20&c=WHsjLIod35jD34Pz85B8te6mFHlTZ4x2Y-aL8_6bUoI=">
+											</div>
+											<div class="row p-3">
+												<div class="symbols">
+													<i class="fa-regular fa-heart"></i>
+													<i class="fa-regular fa-comment"></i>
+													<i class="fa-regular fa-paper-plane"></i>
+												</div>
+												<h6><strong>450 Likes</strong></h6>
+												<h6>One of the greatest basketball player. #LebronJames</h6>
+											</div>
+											<div class="row p-3">
+												<form>
+													<input type="text" class="border-0 col-10" placeholder="Comment...">
+												</form>
+											</div>
+										</div>
+
+						<div class="tab-pane bg-white" id="post" role="tabpanel" aria-labelledby="post-tab">
+						<div class="container mt-5 col-6 bg-white rounded p-0 border border-grey">
+							<div class="d-flex justify-content-between">
+								<div>
+								   <h4>My Posts</h4>
+								</div>
+								<div>
+									<h5 class="text-secondary">12/14</h5>
+								</div>
+						   </div>
+							<div class="row">
+								<img src="https://as2.ftcdn.net/v2/jpg/03/68/60/13/1000_F_368601343_ZKv6FaAcM25QLYS8JisJLaBnUvBE51VU.jpg">
+							</div>
+							<div class="row p-3">
+								<div class="symbols">
+									<i class="fa-regular fa-heart"></i>
+									<i class="fa-regular fa-comment"></i>
+									<i class="fa-regular fa-paper-plane"></i>
+								</div>
+								<h6><strong>210 Likes</strong></h6>
+								<h6>The photo of a lion.</h6>
+							</div>
+							<div class="row p-3">
+								<form>
+									<input type="text" class="border-0 col-10" placeholder="Comment...">
+								</form>
+							</div>
+						</div>
+
+						<div class="tab-pane bg-white" id="post" role="tabpanel" aria-labelledby="post-tab">
+						<div class="container mt-5 col-6 bg-white rounded p-0 border border-grey">
+							<div class="d-flex justify-content-between">
+								<div>
+								   <h4>My Posts</h4>
+								</div>
+								<div>
+									<h5 class="text-secondary">12/14</h5>
+								</div>
+						   </div>
+							<div class="row">
+								<img src="https://as1.ftcdn.net/v2/jpg/03/28/04/74/1000_F_328047467_EhOr1TscNzNHgkwwjyo9MjaOZy2j8PmC.jpg">
+							</div>
+							<div class="row p-3">
+								<div class="symbols">
+									<i class="fa-regular fa-heart"></i>
+									<i class="fa-regular fa-comment"></i>
+									<i class="fa-regular fa-paper-plane"></i>
+								</div>
+								<h6><strong>305 Likes</strong></h6>
+								<h6>The photo of a cat.</h6>
+							</div>
+							<div class="row p-3">
+								<form>
+									<input type="text" class="border-0 col-10" placeholder="Comment...">
+								</form>
+							</div>
+						</div>
+				</div>
+			</div>
+			</div>
+	
+			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous">
+			</script>
+			<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous">
+			</script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+			crossorigin="anonymous">
+			</script>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+			crossorigin="anonymous"></script>
+</body>
+
+</html>
